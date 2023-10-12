@@ -1,0 +1,34 @@
+/*NAVBAR*/
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b1b32;
+    z-index: 3; 
+    width: 100%;
+    padding: 1.5rem;
+    
+}
+#navbar a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#navbar a:hover{
+    background-color: white;
+    color: #1b1b32;
+}
+@media  (min-width: 768px){
+    header{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+         
+    }
+}
