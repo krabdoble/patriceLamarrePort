@@ -1,5 +1,389 @@
 
-<link rel="stylesheet" href="styles.css">
+<style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*@import "navbar.component.css";
+@import "about.component.css";
+@import "experiences.component.css";
+@import "works.component.css";
+@import "contact.component.css";
+@import "footer.component.css";*/
+
+/*NAVBAR*/
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b1b32;
+    z-index: 3; 
+    width: 100%;
+    padding: 1.5rem;
+    
+}
+#navbar a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#navbar a:hover{
+    background-color: white;
+    color: #1b1b32;
+}
+@media  (min-width: 768px){
+    header{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+         
+    }
+}
+ /* ABOUT */
+ .section1{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.div1{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+.image-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -50px;
+}
+.hero-principal{
+    width: 250px; 
+    height: 250px;
+}
+
+h1{
+    /*font-weight: bold;*/
+    font-family: "rubik dirt", sans-serif;
+    font-size: 3rem;
+    max-width: 400px;
+    text-align: center;
+}
+.text0{
+    padding: 20px 0;
+}
+.text0 p{
+    padding: 10px 0;
+}
+.section1 .text0 h1{
+    display: flex;
+}
+.descrip{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    color: orangered;
+    font-weight: bold;
+}
+.image-hero{
+    width: 100%;
+   /* max-width: 450px;*/
+    height: 100%;
+    border-radius: 20px;
+}
+/*.section2{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}*/
+
+@media screen and (min-width: 768px){
+    .hero-principal{
+        width: 350px; 
+        height: 350px;
+    }
+   .image-hero{
+        width: 1100px;
+        height: 550px;
+        object-fit: cover;   
+    }
+}
+
+/* EXPERIENCES */
+hr{
+    border: 3px solid #1b1b32;
+}
+.experience{
+    margin-top: 30px;
+    padding: 20px;
+}
+.info{
+    padding-top: 20px;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+}
+.section-title{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.2rem;
+    padding-bottom: 5px;
+}
+.section-text{
+    font-size: 1.9rem;
+    padding-top: 10px;
+    text-align: center;
+}
+.column1{
+    text-align: center;
+}
+
+span{
+    margin: 5px;
+}
+
+/* WORKS */
+.section3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+hr{
+    border: 3px solid #1b1b32;
+}
+.some-works{
+    padding-bottom: 20px;
+}
+.some-works h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.image-project{
+    width: 100%;
+    height: 100%;
+}
+.col1{
+    opacity: 1;
+}
+.column2{
+    position: relative;
+}
+.link a{
+    text-decoration: none;
+}
+.col1{
+    position: absolute;
+    align-items: center;
+    top: 25%;
+    left: 35%   
+}
+.col1 p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    color: #1f1f1f;
+    color: white;
+}
+.col1 a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    
+}
+.link a:hover i{
+    background-color: #1f1f1f;
+    color: brown;
+}
+.link{
+    display: flex;
+}
+
+/* CONTACTS */
+.section4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    width: 100%;
+}
+.text1{
+    font-size: 30px;
+    color: orangered;
+    font-style: italic;
+    font-weight: bold;
+}
+.text2{
+    font-style: italic;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+.row1{
+    background-color: rgb(68, 68, 189);
+    height: 250px;
+    border-radius: 130px;
+    width:100%;
+   
+    
+}
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column button{
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+.column button:hover{
+    background-color: brown;
+    color: white;
+}
+
+/* FOOTER */
+.footer{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    background-color: #1f1f1f;
+}
+.go-up{
+    margin-bottom: 10px;
+}
+.goUp{
+text-decoration: none;
+color: #1f1f1f;
+font-weight: bold;
+background-color: white;
+border-radius: 20px;
+}
+.goUp:hover{
+    background-color: white;
+    color: #1f1f1f;
+}
+.create{
+    color: white;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#profile-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 50px;
+    width: 50px;
+    transition: all 0.2s ease-in;
+    padding: 2px;
+    text-decoration: none;
+}
+
+i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+#profile-link:hover{
+    background-color: white;
+    border: rgb(13,110,253);
+}
+#profile-link:hover i{
+    color: black;
+}
+</style>
 
 <app-navbar></app-navbar>
 <app-about></app-about>
