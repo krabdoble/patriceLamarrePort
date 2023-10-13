@@ -48,6 +48,13 @@ table {
 	border-spacing: 0;
 }
 
+@import "navbar.component.css";
+@import "about.component.css";
+@import "experiences.component.css";
+@import "works.component.css";
+@import "contact.component.css";
+@import "footer.component.css";
+
 
 
 
